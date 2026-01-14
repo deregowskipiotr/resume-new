@@ -5,6 +5,8 @@ import { Layout } from "./components/layout";
 import HomeHero from "./components/HomeHero";
 import AboutSection from "./components/About";
 import { ExperienceSection } from "./components/ExperienceSection";
+import { ProjectsSection } from "./components/ProjectsSection";
+import { ContactSection } from "./components/ContactSection";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
             <HomeHero />
             <AboutSection />
             <ExperienceSection />
+            <ProjectsSection />
+            <ContactSection />
           </div>
         </Layout>
       </Suspense>

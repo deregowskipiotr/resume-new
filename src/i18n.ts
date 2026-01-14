@@ -136,6 +136,79 @@ i18n
               ],
             },
           },
+          // English
+          projects: {
+            title: "Projects",
+            intro:
+              "A collection of projects created while learning modern web development and building new skills.",
+            "bartenday-hq": {
+              title: "BartenDay HQ",
+              description:
+                "Choose your mood, tell the bartender how you feel, and receive a personalized cocktail recommendation.",
+              tech: [
+                "React",
+                "TypeScript",
+                "Tailwind CSS",
+                "Framer Motion",
+                "Vite",
+              ],
+              live: "Live Demo",
+              source: "Source Code",
+            },
+            "bourbon-showcase": {
+              title: "Iconic Whisky Products Showcase",
+              description:
+                "A modern product showcase for premium bourbon, highlighting craftsmanship, tasting notes, and bottle design with smooth animations.",
+              tech: [
+                "React",
+                "Next.js",
+                "Tailwind CSS",
+                "Framer Motion",
+                "TypeScript",
+              ],
+              live: "Live Demo",
+              source: "Source Code",
+            },
+            "resume-app": {
+              title: "Landing page",
+              description:
+                "A clean, responsive resume builder that lets users create and export a professional CV with customizable sections and themes.",
+              tech: [
+                "React",
+                "TypeScript",
+                "Tailwind CSS",
+                "Zod",
+                "React Hook Form",
+              ],
+              live: "Live Demo",
+              source: "Source Code",
+            },
+          },
+          // English
+          contact: {
+            title: "Contact",
+            intro: "Let’s build something great together.",
+            message: {
+              1: "This is it — now you know a bit about me, my experience, and the projects I’ve built while learning modern frontend development.",
+              2: "I hope you enjoyed browsing my portfolio and seeing how I turn ideas into clean, responsive interfaces.",
+              3: "If you’re looking for a frontend developer who’s passionate about UX, performance, and clean code, I’d love to hear from you.",
+              4: "Feel free to reach out for more information, a chat, or to discuss how I can contribute to your team.",
+            },
+            form: {
+              name: "Your Name",
+              namePlaceholder: "John Doe",
+              email: "Your Email",
+              emailPlaceholder: "john@example.com",
+              subject: "Subject",
+              subjectPlaceholder: "Frontend Developer Position",
+              message: "Message",
+              messagePlaceholder: "Hi, I'd like to discuss...",
+              send: "Send Message",
+              sending: "Sending...",
+              success: "Message sent! I'll get back to you soon.",
+              error: "Something went wrong. Please try again.",
+            },
+          },
         },
       },
       pl: {
@@ -265,6 +338,79 @@ i18n
                 "Ustalanie warunków zakupowych (ceny, terminy płatności, dostawy).",
                 "Odpowiedzialność za terminowe płatności klientów.",
               ],
+            },
+          },
+          // Polish
+          projects: {
+            title: "Projekty",
+            intro:
+              "Zbiór projektów stworzonych podczas nauki nowoczesnego frontendu i zdobywania nowych umiejętności.",
+            "bartenday-hq": {
+              title: "BartenDay HQ",
+              description:
+                "Wybierz nastrój, powiedz barmanowi jak się czujesz i otrzymaj spersonalizowaną rekomendację koktajlu.",
+              tech: [
+                "React",
+                "TypeScript",
+                "Tailwind CSS",
+                "Framer Motion",
+                "Vite",
+              ],
+              live: "Demo",
+              source: "Kod Źródłowy",
+            },
+            "bourbon-showcase": {
+              title: "Prezentacja kultowych whisky",
+              description:
+                "Nowoczesny pokaz produktów premium whisky, podkreślający rzemiosło, notki smakowe i projekt butelki z płynnymi animacjami.",
+              tech: [
+                "React",
+                "Next.js",
+                "Tailwind CSS",
+                "Framer Motion",
+                "TypeScript",
+              ],
+              live: "Demo",
+              source: "Kod Źródłowy",
+            },
+            "resume-app": {
+              title: "Twoja przykładowa aplikacja",
+              description:
+                "Czysta, responsywna aplikacja do tworzenia CV, która pozwala użytkownikom tworzyć i eksportować profesjonalne CV z dostosowywalnymi sekcjami i motywami.",
+              tech: [
+                "React",
+                "TypeScript",
+                "Tailwind CSS",
+                "Zod",
+                "React Hook Form",
+              ],
+              live: "Demo",
+              source: "Kod Źródłowy",
+            },
+          },
+          // Polish
+          contact: {
+            title: "Kontakt",
+            intro: "Zbudujmy razem coś świetnego.",
+            message: {
+              1: "To już wszystko — teraz wiesz już trochę o mnie, moim doświadczeniu i projektach, które stworzyłem podczas nauki nowoczesnego frontendu.",
+              2: "Mam nadzieję, że przyjemnie przeglądałeś moje portfolio i widziałeś, jak zamieniam pomysły w czyste, responsywne interfejsy.",
+              3: "Jeśli szukasz frontend developera, który pasjonuje się UX, wydajnością i czystym kodem, chętnie się z Tobą skontaktuję.",
+              4: "Śmiało napisz, jeśli chcesz uzyskać więcej informacji, porozmawiać lub omówić, jak mogę wspomóc Twój zespół.",
+            },
+            form: {
+              name: "Twoje Imię i Nazwisko",
+              namePlaceholder: "Jan Kowalski",
+              email: "Twój Email",
+              emailPlaceholder: "jan@example.com",
+              subject: "Temat",
+              subjectPlaceholder: "Stanowisko Frontend Developera",
+              message: "Wiadomość",
+              messagePlaceholder: "Cześć, chciałbym omówić...",
+              send: "Wyślij Wiadomość",
+              sending: "Wysyłanie...",
+              success: "Wiadomość wysłana! Odpiszę wkrótce.",
+              error: "Coś poszło nie tak. Spróbuj ponownie.",
             },
           },
         },
