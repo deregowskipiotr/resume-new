@@ -1,23 +1,65 @@
 // components/ContactForm.tsx
 "use client";
 
-
+import  { useEffect, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 export function ContactForm() {
-  const [state, handleSubmit] = useForm("xreebbjr"); // ← replace with your Form ID
+  const [state, handleSubmit] = useForm("xreebbjr"); // ←  your Form ID
+  const [showSuccess, setShowSuccess] = useState(true);
+  const [isFading, setIsFading] = useState(false);
 
-  if (state.succeeded) {
+  // Auto-hide with fade-out after 5 seconds
+  useEffect(() => {
+    if (state.succeeded && showSuccess) {
+      const timer = setTimeout(() => {
+        setIsFading(true);
+        // Hide completely after fade-out animation
+        const hideTimer = setTimeout(() => {
+          setShowSuccess(false);
+        }, 500); // 500ms = fade-out duration
+
+        return () => clearTimeout(hideTimer);
+      }, 5000); // 5000ms = 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [state.succeeded, showSuccess]);
+
+  const handleReset = () => {
+    setShowSuccess(false);
+    setIsFading(false);
+  };
+
+  if (state.succeeded && showSuccess) {
     return (
-      <p className="text-center text-sm text-green-500">
-        Message sent! I’ll get back to you soon.
-      </p>
+      <div
+        className={`text-center space-y-4 transition-opacity duration-500 ${
+          isFading ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        <p className="text-sm text-green-500">
+          Message sent! I’ll get back to you soon.
+        </p>
+        <div className="flex justify-center gap-4 text-sm">
+          <button
+            type="button"
+            onClick={handleReset}
+            className="text-primary hover:underline"
+          >
+            Send another message
+          </button>
+          <a href="/" className="text-primary hover:underline">
+            Back to app
+          </a>
+        </div>
+      </div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      {/* Honeypot (invisible to humans) */}
+      {/* Honeypot */}
       <input
         type="text"
         name="_gotcha"
@@ -26,6 +68,9 @@ export function ContactForm() {
         tabIndex={-1}
         aria-hidden="true"
       />
+
+      {/* Hidden subject */}
+      <input type="hidden" name="_subject" value="Portfolio Contact Form" />
 
       {/* Name */}
       <div>

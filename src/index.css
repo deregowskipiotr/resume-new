@@ -101,4 +101,15 @@
       background-color: rgba(59, 130, 246, 0.2); /* primary with 20% opacity */
     }
   }
+
+  
+.success-message {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.success-message.fade-out {
+  opacity: 0;
+}
+
 }

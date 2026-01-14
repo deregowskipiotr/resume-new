@@ -1,6 +1,21 @@
+// components/HomeHero.tsx
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Linkedin, Github, Mail, ChevronDown, Sparkles } from "lucide-react";
+
+function scrollToSection(id: string, offset = 80) {
+  const element = document.getElementById(id);
+  if (element) {
+    const elementPosition =
+      element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+}
 
 const HomeHero = () => {
   const { t } = useTranslation();
@@ -10,22 +25,37 @@ const HomeHero = () => {
       icon: Linkedin,
       label: t("hero.social.linkedin") || "LinkedIn",
       href: "https://linkedin.com/in/yourprofile",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      onClick: undefined,
     },
     {
       icon: Github,
       label: t("hero.social.github") || "GitHub",
       href: "https://github.com/yourusername",
+      target: "_blank",
+      rel: "noopener noreferrer",
+      onClick: undefined,
     },
     {
       icon: Mail,
       label: t("hero.social.email") || "Email",
-      href: "mailto:hello@yourdomain.com",
+      href: "#contact",
+      target: undefined,
+      rel: undefined,
+      onClick: (e: React.MouseEvent) => {
+        e.preventDefault();
+        scrollToSection("contact", 80);
+      },
     },
   ];
 
   return (
-    <section id ="home" className="min-h-[90vh] w-full flex items-center relative overflow-hidden py-16 md:py-0">
-      {/* Subtle Background Elements */}
+    <section
+      id="home"
+      className="min-h-[90vh] w-full flex items-center relative overflow-hidden py-16 md:py-0"
+    >
+      {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/15 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/15 rounded-full blur-3xl" />
@@ -90,8 +120,9 @@ const HomeHero = () => {
                   <motion.a
                     key={social.label}
                     href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={social.target}
+                    rel={social.rel}
+                    onClick={social.onClick}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.6 + index * 0.1 }}
@@ -116,6 +147,10 @@ const HomeHero = () => {
             >
               <a
                 href="#experience"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection("experience", 80); // 80px offset (adjust to your header height)
+                }}
                 className="inline-flex items-center gap-2 group"
               >
                 <span className="text-sm uppercase tracking-[0.15em] font-medium text-foreground/70 group-hover:text-primary transition-colors">
@@ -172,7 +207,7 @@ const HomeHero = () => {
                     ease: "easeInOut",
                   },
                 }}
-                className="absolute inset-0 rounded-xl border-[0.5px] w-64 md:w-96 h-64 md:h-96 ml-23 md:ml-20 backdrop-blur-sm "
+                className="absolute inset-0 rounded-xl border-[0.5px] w-64 md:w-96 h-64 md:h-96 ml-23 md:ml-20 backdrop-blur-sm"
                 style={{ borderStyle: "solid" }}
               />
             </div>
@@ -184,12 +219,14 @@ const HomeHero = () => {
 
               {/* Profile Image */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-2xl border-2 border-border/50 bg-card/50 backdrop-blur-sm">
-                {/* Replace with your image */}
                 <div className="absolute inset-0 bg-linear-to-br from-card to-secondary/30 flex items-center justify-center">
                   <div className="text-center p-8">
                     <div className="w-32 h-32 md:w-62 md:h-62 mx-auto mb-6 rounded-full bg-linear-to-br from-primary/20 to-secondary/20 border-2 border-white/10 flex items-center justify-center">
-                      {/* Placeholder for your photo */}
-                      <img src="/src/assets/zdj CV.jpg" alt="Profile-image" className="w-full h-full object-cover rounded-full" />
+                      <img
+                        src="/images/zdj CV.jpg"
+                        alt="Profile Image"
+                        className="w-full h-full object-cover rounded-full"
+                      />
                     </div>
                   </div>
                 </div>
