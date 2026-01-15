@@ -61,7 +61,7 @@ const HomeHero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/15 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column: Content */}
           <motion.div
@@ -75,7 +75,7 @@ const HomeHero = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.4 }}
-              className="inline-flex items-center gap-2 px-1 md:px-4 py-2 rounded-full bg-secondary/30 border border-border/50"
+              className="inline-flex items-center gap-4 md:gap-2 px-2 md:px-4 py-2 rounded-full bg-secondary/30 border border-border/50"
             >
               <Sparkles className="w-3.5 h-3.5 text-primary" />
               <span className="text-xs uppercase tracking-[0.2em] text-foreground/70">
@@ -91,7 +91,7 @@ const HomeHero = () => {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-snug"
               >
-                <span className="text-foreground/90 mr-20 md:mr-0">
+                <span className="text-foreground/90">
                   {t("hero.greeting")}
                 </span>
                 <span className="text-primary italic"> Piotr Deręgowski</span>
@@ -163,7 +163,7 @@ const HomeHero = () => {
                     duration: 2,
                     ease: "easeInOut",
                   }}
-                  className="w-4 h-4"
+                  className="w-4 h-4 hidden md:block"
                 >
                   <ChevronDown className="w-4 h-4 text-primary" />
                 </motion.div>
@@ -176,10 +176,10 @@ const HomeHero = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" }}
-            className="relative flex justify-center items-center"
+            className="relative flex justify-center items-center mt-6 md:mt-0"
           >
             {/* Animated Border Effect */}
-            <div className="absolute -inset-1">
+            <div className="absolute -inset-1 -ml-10 md:ml-0">
               <motion.div
                 animate={{
                   rotate: [0, 360],
@@ -207,7 +207,7 @@ const HomeHero = () => {
                     ease: "easeInOut",
                   },
                 }}
-                className="absolute inset-0 rounded-xl border-[0.5px] w-64 md:w-96 h-64 md:h-96 ml-23 md:ml-20 backdrop-blur-sm"
+                className="absolute inset-0 rounded-xl border-[0.5px] w-62 md:w-96 h-62 md:h-96 ml-23 md:ml-20 backdrop-blur-sm"
                 style={{ borderStyle: "solid" }}
               />
             </div>
@@ -221,7 +221,7 @@ const HomeHero = () => {
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-2xl border-2 border-border/50 bg-card/50 backdrop-blur-sm">
                 <div className="absolute inset-0 bg-linear-to-br from-card to-secondary/30 flex items-center justify-center">
                   <div className="text-center p-8">
-                    <div className="w-32 h-32 md:w-62 md:h-62 mx-auto mb-6 rounded-full bg-linear-to-br from-primary/20 to-secondary/20 border-2 border-white/10 flex items-center justify-center">
+                    <div className="w-42 h-42 md:w-62 md:h-62 mx-auto mb-6 rounded-full bg-linear-to-br from-primary/20 to-secondary/20 border-2 border-white/10 flex items-center justify-center">
                       <img
                         src="/images/zdj CV.jpg"
                         alt="Profile Image"

@@ -70,7 +70,7 @@ export function ContactForm() {
       />
 
       {/* Hidden subject */}
-      <input type="hidden" name="_subject" value="Portfolio Contact Form" />
+      <input type="hidden" name="_subject" value="New Message from Resume-New-App" />
 
       {/* Name */}
       <div>
@@ -128,7 +128,7 @@ export function ContactForm() {
           name="subject"
           required
           className="w-full rounded-md border border-border/60 bg-background/60 px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary/40"
-          placeholder="Frontend Developer Position"
+          placeholder="Write me about..."
         />
         <ValidationError
           prefix="Subject"

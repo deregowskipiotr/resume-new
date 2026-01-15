@@ -113,7 +113,7 @@ export function ExperienceSection() {
         </motion.ul>
 
         {/* Right: spotlight panel - same height as left */}
-        <div className="relative h-130 md:h-full">
+        <div className="relative h-145 md:h-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeItem.id}

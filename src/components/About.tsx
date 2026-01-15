@@ -33,7 +33,7 @@ const AboutSection = () => {
 
       {/* Content forward */}
       <div className="relative z-20">
-        <div className="container mx-auto px-4 md:px-6 w-full">
+        <div className="container mx-auto md:px-6 w-full">
           {/* Title - NO bg/border, clean */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -51,7 +51,7 @@ const AboutSection = () => {
           </motion.div>
 
           {/* Right aligned content */}
-          <div className=" mx-auto">
+          <div className="mx-auto">
             <div className="space-y-6">
               {aboutContent.map((paragraph, index) => (
                 <motion.p

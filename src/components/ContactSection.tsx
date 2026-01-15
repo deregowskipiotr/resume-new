@@ -44,6 +44,10 @@ export function ContactSection() {
           <ContactForm />
         </div>
       </div>
+      <div className="mt-8 items-center">
+        <div className="w-full h-px text-primary mt-4"/>
+        <span className="text-secondary ml-8 md:ml-0">* Created by Pioter nad Perplex 2026</span>
+      </div>
     </section>
   );
 }
