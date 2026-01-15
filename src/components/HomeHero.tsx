@@ -75,7 +75,7 @@ const HomeHero = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.4 }}
-              className="inline-flex items-center gap-2 px-4 md:px-4 py-2 rounded-full bg-secondary/30 border border-border/50"
+              className="inline-flex items-center gap-2 px-6 md:px-4 py-2 rounded-full bg-secondary/30 border border-border/50"
             >
               <Sparkles className="w-3.5 h-3.5 text-primary" />
               <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-foreground/70">
@@ -127,7 +127,7 @@ const HomeHero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.6 + index * 0.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group flex items-center gap-1 md:gap-2 px-2 md:px-4 py-3 rounded-lg bg-card border border-border hover:border-primary/30 hover:bg-secondary/20 transition-all duration-200"
+                    className="group flex items-center gap1.5 md:gap-2 px-2 md:px-4 py-2 md:py-3 rounded-lg bg-card border border-border hover:border-primary/30 hover:bg-secondary/20 transition-all duration-200"
                   >
                     <social.icon className="w-4 h-4 text-foreground/70 group-hover:text-primary transition-colors" />
                     <span className="text-sm font-medium text-foreground/80 group-hover:text-foreground">
@@ -163,9 +163,9 @@ const HomeHero = () => {
                     duration: 2,
                     ease: "easeInOut",
                   }}
-                  className="w-4 h-4 hidden md:block"
+                  className="w-4 h-4"
                 >
-                  <ChevronDown className="w-4 h-4 text-primary" />
+                  <ChevronDown className="w-4 h-4 text-primary hidden md:block" />
                 </motion.div>
               </a>
             </motion.div>
@@ -179,7 +179,7 @@ const HomeHero = () => {
             className="relative flex justify-center items-center mt-6 md:mt-0"
           >
             {/* Animated Border Effect */}
-            <div className="absolute -inset-1 -ml-9 md:ml-0">
+            <div className="absolute -inset-1 -ml-10 md:ml-0">
               <motion.div
                 animate={{
                   rotate: [0, 360],
