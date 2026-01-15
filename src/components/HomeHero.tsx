@@ -75,10 +75,10 @@ const HomeHero = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.4 }}
-              className="inline-flex items-center gap-4 md:gap-2 px-2 md:px-4 py-2 rounded-full bg-secondary/30 border border-border/50"
+              className="inline-flex items-center gap-2 px-4 md:px-4 py-2 rounded-full bg-secondary/30 border border-border/50"
             >
               <Sparkles className="w-3.5 h-3.5 text-primary" />
-              <span className="text-xs uppercase tracking-[0.2em] text-foreground/70">
+              <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-foreground/70">
                 {t("hero.badge")}
               </span>
             </motion.div>
@@ -101,7 +101,7 @@ const HomeHero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="text-xl md:text-2xl text-foreground/70 font-light leading-snug"
+                className="text-[16px] md:text-2xl text-foreground/70 font-light leading-snug"
               >
                 {t("hero.description")}
               </motion.p>
@@ -127,7 +127,7 @@ const HomeHero = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.6 + index * 0.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group flex items-center gap-2 px-4 py-3 rounded-lg bg-card border border-border hover:border-primary/30 hover:bg-secondary/20 transition-all duration-200"
+                    className="group flex items-center gap-1 md:gap-2 px-2 md:px-4 py-3 rounded-lg bg-card border border-border hover:border-primary/30 hover:bg-secondary/20 transition-all duration-200"
                   >
                     <social.icon className="w-4 h-4 text-foreground/70 group-hover:text-primary transition-colors" />
                     <span className="text-sm font-medium text-foreground/80 group-hover:text-foreground">
@@ -179,7 +179,7 @@ const HomeHero = () => {
             className="relative flex justify-center items-center mt-6 md:mt-0"
           >
             {/* Animated Border Effect */}
-            <div className="absolute -inset-1 -ml-10 md:ml-0">
+            <div className="absolute -inset-1 -ml-9 md:ml-0">
               <motion.div
                 animate={{
                   rotate: [0, 360],
@@ -218,7 +218,7 @@ const HomeHero = () => {
               <div className="absolute inset-0 bg-linear-to-r from-primary/10 to-secondary/10 rounded-2xl blur-2xl animate-pulse" />
 
               {/* Profile Image */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-2xl border-2 border-border/50 bg-card/50 backdrop-blur-sm">
+              <div className="relative -ml-2 md:ml-0 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-2xl border-2 border-border/50 bg-card/50 backdrop-blur-sm">
                 <div className="absolute inset-0 bg-linear-to-br from-card to-secondary/30 flex items-center justify-center">
                   <div className="text-center p-8">
                     <div className="w-42 h-42 md:w-62 md:h-62 mx-auto mb-6 rounded-full bg-linear-to-br from-primary/20 to-secondary/20 border-2 border-white/10 flex items-center justify-center">
