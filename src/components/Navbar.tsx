@@ -111,7 +111,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={toggleLanguage}
-              className="btn-subtle px-2 py-1 cursor-pointer"
+              className="btn-subtle px-2 cursor-pointer"
             >
               <Globe className="w-4 h-4" />
               <span className="text-[10px] uppercase tracking-[0.18em]">

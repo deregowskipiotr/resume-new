@@ -179,7 +179,7 @@ const HomeHero = () => {
             className="relative flex justify-center items-center mt-6 md:mt-0"
           >
             {/* Animated Border Effect */}
-            <div className="absolute -inset-1 -ml-10 md:ml-0">
+            <div className="absolute -inset-1 hidden md:block">
               <motion.div
                 animate={{
                   rotate: [0, 360],
@@ -221,7 +221,7 @@ const HomeHero = () => {
               <div className="relative -ml-2 md:ml-0 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 overflow-hidden rounded-2xl border-2 border-border/50 bg-card/50 backdrop-blur-sm">
                 <div className="absolute inset-0 bg-linear-to-br from-card to-secondary/30 flex items-center justify-center">
                   <div className="text-center p-8">
-                    <div className="w-42 h-42 md:w-62 md:h-62 mx-auto mb-6 rounded-full bg-linear-to-br from-primary/20 to-secondary/20 border-2 border-white/10 flex items-center justify-center">
+                    <div className="w-46 h-46 mt-4 md:mt-0 md:w-62 md:h-62 mx-auto mb-6 rounded-full bg-linear-to-br from-primary/20 to-secondary/20 border-2 border-white/10 flex items-center justify-center">
                       <img
                         src="/images/zdj CV.jpg"
                         alt="Profile Image"
